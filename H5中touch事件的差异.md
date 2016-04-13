@@ -85,7 +85,8 @@ $(".basket-list ul li").on("touchend  touchcancel",function(){
 ```
 4.在解决scroll问题的时候发现ios滑动效果变得不平滑了，一开始以为是scroll操作滚动条使得页面变得卡顿不再平滑  
  其实不然，我们在用css出现滚动条的时候是**overflow:auto;**或者**overflow:scroll; ** 
- 这时候再加一条**-webkit-overflow-scrolling: touch;**就好
+ 这时候再加一条  
+ **-webkit-overflow-scrolling: touch;**就好
 
 
 
