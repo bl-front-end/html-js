@@ -45,17 +45,12 @@ $(".basket-list ul li").on("touchend ",function(){
 
 
  
-| Table         | 安卓          | ios   |
-| ------------- |:-------------:| -----:|
-| touchstart    | 支持          |  支持 |
-| touchmove     | 支持          |  支持 |
-| touchend      | 不支持        |  支持 |
-| touchcancel   | 支持          |不支持 |
+| Table         | 安卓          | ios   | ios   |
+| ------------- |:------------- |: -----|:-----:|
+| touchstart    | 支持          |  支持 |  支持 |
+| touchmove     | 支持          |  支持 |  支持 |
+| touchend      | 不支持        |  支持 |  支持 |
+| touchcancel   | 支持          |不支持 |不支持 |
 
 
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
