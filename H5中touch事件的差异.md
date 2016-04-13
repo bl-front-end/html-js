@@ -76,22 +76,12 @@ $(".basket-list ul li").on("touchend  touchcancel",function(){
 	var test=function(x){
 		if($(window).scrollTop()==x){
 			//滚动条停止时触发的事件
-			for(var i=0;i<length-1;i++){
-				var toptemp1=$(".game-name-tab").eq(i).offset().top-$(".game-name-tab").eq(0).offset().top;
-				var toptemp2=$(".game-name-tab").eq(i+1).offset().top-$(".game-name-tab").eq(0).offset().top;
-				if(toptemp1<=x&&x<=toptemp2){
-					$(".right-menu li").css("color","#333333");
-					$(".right-menu li").eq(i).css("color","green");
-				}
-				if(x==$(document.body).height()-$(window).height()){
-					$(".right-menu li").css("color","#333333");
-					$(".right-menu li").eq(length-1).css("color","green");
-				}
-			}
+			
 		}
 	};
 ```
-
+4.在解决scroll问题的时候发现ios滑动效果变得不平滑了，一开始以为是scroll操作滚动条使得页面变得卡顿不再平滑  
+ 其实不然，我们在用css出现滚动条的时候是overflow:auto;或者overflow:scroll;这时候再加一条-webkit-overflow-scrolling: touch;就好
 
 
 
