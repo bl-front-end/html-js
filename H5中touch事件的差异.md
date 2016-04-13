@@ -45,12 +45,12 @@ $(".basket-list ul li").on("touchend ",function(){
 
 
  
-| Tables        | Are           | Cool  |
+| Table         | 安卓          | ios   |
 | ------------- |:-------------:| -----:|
 | touchstart    | 支持          |  支持 |
 | touchmove     | 支持          |  支持 |
 | touchend      | 不支持        |  支持 |
-| touchend      | 不支持        |  支持 |
+| touchcancel   | 支持          |不支持 |
 
 
 
