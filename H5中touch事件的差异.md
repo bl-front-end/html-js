@@ -1,4 +1,6 @@
 # 问题由来
+原本需求：在移动端滑动列表时，列表对应的目录要切换至对应位置 要达到这样一个需求因为涉及到滑动  
+自然想到了touch事件，然而，在touch事件写完后应用到移动端时  
 提供给移动端的js事件中发现在安卓上touchend触发不了  
 
 ##源代码
@@ -81,7 +83,8 @@ $(".basket-list ul li").on("touchend  touchcancel",function(){
 	};
 ```
 4.在解决scroll问题的时候发现ios滑动效果变得不平滑了，一开始以为是scroll操作滚动条使得页面变得卡顿不再平滑  
- 其实不然，我们在用css出现滚动条的时候是overflow:auto;或者overflow:scroll;这时候再加一条-webkit-overflow-scrolling: touch;就好
+ 其实不然，我们在用css出现滚动条的时候是**overflow:auto;**或者**overflow:scroll; ** 
+ 这时候再加一条**-webkit-overflow-scrolling: touch;**就好
 
 
 
