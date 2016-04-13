@@ -5,6 +5,7 @@
 
 ```js
 $(".basket-list ul li").on("touchend ",function(){
+		
 		var height=$(".basket-list").scrollTop()+$(".basket-list").height()-$(".basket-list ul li").height();
 		var menumlength=$(".basket-lefmenu ul li").length;
 		for(var i=1;i<=menumlength;i++){
@@ -26,3 +27,7 @@ $(".basket-list ul li").on("touchend ",function(){
 		}
 	});
 ```
+这串代码主要是想通过在touchend的时候按照滚动条高度来切换目录  
+
+
+##查阅资料-解决问题
