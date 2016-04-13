@@ -87,7 +87,7 @@ $(".basket-list ul li").on("touchend  touchcancel",function(){
  其实不然，我们在用css出现滚动条的时候是  
  **overflow:auto;**  
  或者  
- **overflow:scroll; ** 
+ **overflow:scroll;**  
  这时候再加一条  
  **-webkit-overflow-scrolling: touch;**就好
 
