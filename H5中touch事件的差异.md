@@ -50,5 +50,61 @@ $(".basket-list ul li").on("touchend ",function(){
 | touchend      | 不支持        |  支持 |
 | touchcancel   | 支持          |不支持 |
 
+其中测试安卓时用了自带浏览器和UC浏览器，测ios时用了谷歌，safari,和UC，浏览器对这些问题并没有什么影响。
+**同一机型不同的浏览器是一样的效果**
+## 总结
+1.通过touch事件写dom时如果不需要考虑滚动事件等等可以在touchstart或touchmove 里执行一下 e.preventDefault();  
+2.如果需要考虑scroll事件那就只能在touchend绑定的同时绑定touchcancel  
+  如上面源代码需要考虑scroll，则我们可以  
+```js
+$(".basket-list ul li").on("touchend  touchcancel",function(){
+		//代码略
+	});
+```
+3.因为scroll事件在滑动中有惯性所以其实用touch事件并不准确，经过实验用scroll事件监听会效果好一些，通过判断滑动什么时候结束来达到想要的效果
+	
+```js	
+	var topvalue=0;
+		
+	var	length=$(".game-name-tab").length;
+	$(window).scroll(function(){
+			topvalue=$(window).scrollTop();
+			setTimeout("test(topvalue)",100);
+		
+		
+	});
+	var test=function(x){
+		if($(window).scrollTop()==x){
+			//滚动条停止时触发的事件
+			for(var i=0;i<length-1;i++){
+				var toptemp1=$(".game-name-tab").eq(i).offset().top-$(".game-name-tab").eq(0).offset().top;
+				var toptemp2=$(".game-name-tab").eq(i+1).offset().top-$(".game-name-tab").eq(0).offset().top;
+				if(toptemp1<=x&&x<=toptemp2){
+					$(".right-menu li").css("color","#333333");
+					$(".right-menu li").eq(i).css("color","green");
+				}
+				if(x==$(document.body).height()-$(window).height()){
+					$(".right-menu li").css("color","#333333");
+					$(".right-menu li").eq(length-1).css("color","green");
+				}
+			}
+		}
+	};
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
