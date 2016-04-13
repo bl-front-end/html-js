@@ -56,7 +56,7 @@ $(".basket-list ul li").on("touchend ",function(){
 **同一机型不同的浏览器是一样的效果**
 ## 总结
 1.通过touch事件写dom时，如果不需要考虑滚动事件等等  
-  可以在touchstart或touchmove 里执行一下 e.preventDefault()  *不是很建议使用*;  
+  可以在touchstart或touchmove 里执行一下 e.preventDefault()  *（不是很建议使用）*;  
 2.如果需要考虑scroll事件那就只能在touchend绑定的同时绑定touchcancel  
   如上面源代码需要考虑scroll，则我们可以  
 ```js
