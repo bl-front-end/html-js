@@ -41,12 +41,12 @@ $(".basket-list ul li").on("touchend ",function(){
 这是属于安卓的bug
 
 用自己的源代码测试了下：  
-| Tables        | Are           | Cool  |  
-| ------------- |:-------------:| -----:|  
-| touchstart    | 支持          |  支持 |  
-| touchmove     | 支持          |  支持 |  
-| touchend      | 不支持        |  支持 |  
-| touchend      | 不支持        |  支持 |  
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| touchstart    | 支持          |  支持 |
+| touchmove     | 支持          |  支持 |
+| touchend      | 不支持        |  支持 |
+| touchend      | 不支持        |  支持 |
 
 
 
